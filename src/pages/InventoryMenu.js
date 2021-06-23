@@ -1,4 +1,7 @@
 import {Helmet} from 'react-helmet'
+import SearchBar from "../components/SearchBar";
+import {Container} from "react-bootstrap";
+import PaginationComp from "../components/PaginationComp";
 
 const InventoryMenu = () => {
 
@@ -8,9 +11,11 @@ const InventoryMenu = () => {
             <Helmet>
                 <title>Inventory Menu</title>
             </Helmet>
-            <div>
-
-            </div>
+            <Container>
+                <h1 className='text-center'>Inventory Menu</h1>
+                <SearchBar/>
+                <PaginationComp/>
+            </Container>
         </>
     )
 }

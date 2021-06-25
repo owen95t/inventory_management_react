@@ -1,9 +1,10 @@
 import {Pagination} from "react-bootstrap";
 
 const PaginationComp = () => {
+
     return (
         <>
-            <Pagination>
+            <Pagination className='justify-content-center mt-4 mb-4'>
                 <Pagination.First/>
                 <Pagination.Prev/>
 

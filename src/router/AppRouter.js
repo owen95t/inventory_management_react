@@ -17,25 +17,27 @@ const AppRouter = () => {
     };
 
     return (
-        <HRouter basename='/'>
-            <Navigation/>
-            <div style={{marginTop: '5rem'}}>
-                <GuardProvider guards={[requireAuth]}>
-                    <Switch>
-                        <Route path='/' exact component={() => <Home/>}/>
-                        <Route path='/inventory' render={() => (
-                            <InventoryMenu/>
-                        )}/>
-                        <Route path='/transfers' render={() => (
-                            <TransferMenu/>
-                        )}/>
-                        <Route path='/orders' render={() => (
-                            <OrderMenu/>
-                        )}/>
-                    </Switch>
-                </GuardProvider>
-            </div>
-        </HRouter>
+        <>
+            <HRouter>
+                <Navigation/>
+                <div style={{marginTop: '5rem'}}>
+                    <GuardProvider guards={[requireAuth]}>
+                        <Switch>
+                            <Route path='/' exact component={() => <Home/>}/>
+                            <Route path='/inventory' render={(props) => (
+                                <InventoryMenu {...props}/>
+                            )}/>
+                            <Route path='/transfers' render={() => (
+                                <TransferMenu/>
+                            )}/>
+                            <Route path='/orders' render={() => (
+                                <OrderMenu/>
+                            )}/>
+                        </Switch>
+                    </GuardProvider>
+                </div>
+            </HRouter>
+        </>
     )
 }
 

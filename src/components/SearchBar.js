@@ -4,9 +4,7 @@ const SearchBar = () => {
     return (
         <>
             <InputGroup>
-                <DropdownButton as={InputGroup.Prepend} title='Filter' variant='outline-secondary'>
-
-                </DropdownButton>
+                <DropdownButton as={InputGroup.Prepend} title='Filter' variant='outline-secondary'/>
                 <FormControl placeholder='Search...'/>
                 <InputGroup.Append>
                     <Button variant='outline-success'>Search</Button>

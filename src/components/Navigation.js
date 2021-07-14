@@ -12,7 +12,8 @@ const Navigation = () => {
                 <Nav variant='pills'>
                     <Nav.Link as={Link} to='/inventory'>Inventory</Nav.Link>
                     <Nav.Link as={Link} to='/transfers'>Transfers</Nav.Link>
-                    <Nav.Link as={Link} to='/orders'>Customer Orders</Nav.Link>
+                    <Nav.Link as={Link} to='/orders'>Orders</Nav.Link>
+                    <Nav.Link as={Link} to='/customers'>Customers</Nav.Link>
                 </Nav>
                 <Navbar.Collapse className='justify-content-end'>
                     <Navbar.Text>Right Aligned</Navbar.Text>
